@@ -34,7 +34,7 @@ function MyJourneyPage() {
   return (
     <div className="page-container">
       <h1 className="page-title">My Journey</h1>
-      
+      <h2 className="disclaimer">Overeaters Anonymous has nothing to do with this site.  All opinions are my own and should not be used as medical advice.</h2>
       <div className="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:-translate-x-px before:bg-gradient-to-b before:from-transparent before:via-gray-300 before:to-transparent">
         {events.map((event, index) => (
           <div key={index} className="relative flex items-center">

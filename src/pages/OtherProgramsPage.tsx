@@ -124,6 +124,8 @@ function OtherProgramsPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             12 Step Recovery Programs
           </h1>
+          <h2 className="disclaimer">Overeaters Anonymous has nothing to do with this site.  All opinions are my own and should not be used as medical advice.</h2>
+
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Other fellowship programs dedicated to recovery and healing through
             the Twelve Steps

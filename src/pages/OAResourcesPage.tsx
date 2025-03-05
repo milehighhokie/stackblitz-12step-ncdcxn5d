@@ -66,6 +66,7 @@ function OAResourcesPage() {
   return (
     <div className="page-container">
       <h1 className="page-title">My Recovery Resources</h1>
+      <h2 className="disclaimer">Overeaters Anonymous has nothing to do with this site.  All opinions are my own and should not be used as medical advice.</h2>
 
       <div className="space-y-6">
         <div className="bg-white p-6 rounded-lg shadow-sm">

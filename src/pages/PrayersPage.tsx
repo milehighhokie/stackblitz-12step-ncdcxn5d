@@ -48,6 +48,7 @@ function PrayersPage() {
   return (
     <div className="page-container">
       <h1 className="page-title">Meditations</h1>
+      <h2 className="disclaimer">Overeaters Anonymous has nothing to do with this site.  All opinions are my own and should not be used as medical advice.</h2>
 
       <div className="space-y-6">
         {meditations.map((meditation) => (

@@ -5,7 +5,8 @@ function RecipesPage() {
   return (
     <div className="page-container">
       <h1 className="page-title">Recipes</h1>
-      
+      <h2 className="disclaimer">Overeaters Anonymous has nothing to do with this site.  All opinions are my own and should not be used as medical advice.</h2>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Placeholder recipe cards */}
         {[1, 2, 3, 4].map((item) => (

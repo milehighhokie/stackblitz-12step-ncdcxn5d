@@ -69,6 +69,8 @@ function HomePage() {
           </p>
         </Link>
       </div>
+      <h2 className="disclaimer">Overeaters Anonymous has nothing to do with this site.  All opinions are my own and should not be used as medical advice.</h2>
+
     </div>
   );
 }
