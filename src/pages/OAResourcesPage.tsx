@@ -61,6 +61,11 @@ function OAResourcesPage() {
       title: "Feelings Wheel",
       description: "A useful tool for identifying and expressing emotions.",
       website: "https://feelingswheel.com/"
+    },
+    {
+      title: "Late Night Eating",
+      description: "Is Eating Before Bed Bad for You?  The best approach to late-night snacking.",
+      website: "https://health.clevelandclinic.org/is-eating-before-bed-bad-for-you"
     }
   ]
   return (
