@@ -1,11 +1,10 @@
-import React from 'react';
-import { Link, ExternalLink, Globe } from 'lucide-react';
+import { ExternalLink, Globe } from 'lucide-react';
 interface Resource {
   title: string;
   description: string;
   website: string;
 }
-function OAResourcesPage() {
+function MyResourcesPage() {
   const resources: Resource[] = [
     {
       title: "Riven Wood Books",
@@ -71,11 +70,9 @@ function OAResourcesPage() {
   return (
     <div className="page-container">
       <h1 className="page-title">My Recovery Resources</h1>
-      <h2 className="disclaimer">Overeaters Anonymous has nothing to do with this site.  All opinions are my own and should not be used as medical advice.</h2>
 
       <div className="space-y-6">
         <div className="bg-white p-6 rounded-lg shadow-sm">
-          <h2 className="text-xl font-semibold mb-4">Resources</h2>
           <div className="space-y-4">
             {resources.map((resource) => (
               <div key={resource.title} className="p-4 border border-gray-200 rounded-md hover:shadow-md transition-shadow duration-300">
@@ -92,7 +89,7 @@ function OAResourcesPage() {
                   className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200"
                 >
                   <Globe className="w-4 h-4 mr-2" />
-                  Visit Website
+                  {new URL(resource.website).hostname.replace('www.', '')}
                   <ExternalLink className="w-4 h-4 ml-1" />
                 </a>
               </div>
@@ -100,8 +97,14 @@ function OAResourcesPage() {
           </div>
         </div>
       </div>
+      <footer className="mt-16 text-center text-gray-600">
+          <div className="flex items-center justify-center space-x-2">
+            <p>These organizations are not part of this website.</p>
+            <p>All opinions are my own and should not be used as medical advice.</p>
+          </div>
+        </footer>
     </div>
   );
 }
 
-export default OAResourcesPage
+export default MyResourcesPage

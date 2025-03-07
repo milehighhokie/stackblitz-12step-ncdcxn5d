@@ -9,7 +9,7 @@ import { Home, BookOpen, Users, BookHeart, Clock } from 'lucide-react';
 
 // Pages
 import HomePage from './pages/HomePage';
-import OAResourcesPage from './pages/OAResourcesPage';
+import MyResourcesPage from './pages/MyResourcesPage';
 import OtherProgramsPage from './pages/OtherProgramsPage';
 import PrayersPage from './pages/PrayersPage';
 import MyJourneyPage from './pages/MyJourneyPage';
@@ -34,7 +34,7 @@ function App() {
                   <span>My Journey</span>
                 </NavLink>
                 <NavLink
-                  to="/oa-resources"
+                  to="/my-resources"
                   className="flex items-center nav-link"
                 >
                   <BookOpen className="w-5 h-5 mr-1" />
@@ -59,7 +59,7 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/oa-resources" element={<OAResourcesPage />} />
+            <Route path="/my-resources" element={<MyResourcesPage />} />
             <Route path="/other-programs" element={<OtherProgramsPage />} />
             <Route path="/prayers" element={<PrayersPage />} />
             <Route path="/my-journey" element={<MyJourneyPage />} />

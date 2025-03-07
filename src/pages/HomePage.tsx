@@ -1,16 +1,16 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, Users, BookHeart, Clock } from 'lucide-react';
+import { BookOpen, Users, BookHeart, Clock, Cross } from 'lucide-react';
 
 function HomePage() {
   return (
     <div className="page-container">
       <h1 className="page-title">Recovery Awaits</h1>
-      <h2 className="page-help">
-        If you need immediate help, please call 911 or 988. The world needs you.
-      </h2>
+      <div className=" flex items-center justify-center space-x-2">
+        <Cross className="text-red-600" /> 
+        <p>If you need immediate help, please call 911 or 988. The world needs you.</p>
+      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
         <Link
           to="/my-journey"
           className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
@@ -25,7 +25,7 @@ function HomePage() {
         </Link>
 
         <Link
-          to="/oa-resources"
+          to="/my-resources"
           className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
         >
           <div className="flex items-center mb-4">
@@ -69,8 +69,18 @@ function HomePage() {
           </p>
         </Link>
       </div>
-      <h2 className="disclaimer">Overeaters Anonymous has nothing to do with this site.  All opinions are my own and should not be used as medical advice.</h2>
-
+      <footer className="mt-16 text-center text-gray-600">
+          <div className="flex items-center justify-center space-x-2">
+            <Users className="w-5 h-5" />
+            <p>
+              If you're struggling, you're not alone. I hope you can find help here.</p>
+          </div>
+          <div className="flex items-center justify-center space-x-2">
+            <p>
+              All opinions are my own and should not be used as medical advice.
+            </p>
+          </div>
+        </footer>
     </div>
   );
 }

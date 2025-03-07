@@ -48,7 +48,6 @@ function PrayersPage() {
   return (
     <div className="page-container">
       <h1 className="page-title">Meditations</h1>
-      <h2 className="disclaimer">Overeaters Anonymous has nothing to do with this site.  All opinions are my own and should not be used as medical advice.</h2>
 
       <div className="space-y-6">
         {meditations.map((meditation) => (
@@ -70,7 +69,7 @@ function PrayersPage() {
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200"
               >
                 <Globe className="w-4 h-4 mr-2" />
-                Visit Website
+                {new URL(meditation.website).hostname.replace('www.', '')}
                 <ExternalLink className="w-4 h-4 ml-1" />
               </a>
             </div>
@@ -100,13 +99,20 @@ function PrayersPage() {
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200"
               >
                 <Globe className="w-4 h-4 mr-2" />
-                Reference Website
+                {new URL(prayer.website).hostname.replace('www.', '')}
                 <ExternalLink className="w-4 h-4 ml-1" />
               </a>
             </div>
           </div>
         ))}
       </div>
+      <footer className="mt-16 text-center text-gray-600">
+          <div className="flex items-center justify-center space-x-2">
+            <p>
+              These organizations are not part of this website.  All opinions are my own and should not be used as medical advice.
+            </p>
+          </div>
+        </footer>
     </div>
   );
 }
