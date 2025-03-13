@@ -1,13 +1,24 @@
 import { Link } from 'react-router-dom';
-import { BookOpen, Users, BookHeart, Clock, Cross } from 'lucide-react';
+import {
+  BookOpen,
+  Users,
+  BookHeart,
+  Clock,
+  Cross,
+  Calendar,
+  Footprints,
+} from 'lucide-react';
 
 function HomePage() {
   return (
     <div className="page-container">
       <h1 className="page-title">Recovery Awaits</h1>
       <div className=" flex items-center justify-center space-x-2">
-        <Cross className="text-red-600" /> 
-        <p>If you need immediate help, please call 911 or 988. The world needs you.</p>
+        <Cross className="text-red-600" />
+        <p>
+          If you need immediate help, please call 911 or 988. The world needs
+          you.
+        </p>
       </div>
 
       <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -40,14 +51,36 @@ function HomePage() {
         </Link>
 
         <Link
+          to="/my-first-steps"
+          className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+        >
+          <div className="flex items-center mb-4">
+            <Footprints className="w-6 h-6 text-blue-600" />
+            <h2 className="text-xl font-semibold ml-2">My First Steps</h2>
+          </div>
+          <p className="text-gray-600">My first steps as a newcomer to OA.</p>
+        </Link>
+
+        <Link
+          to="/my-daily-recovery"
+          className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+        >
+          <div className="flex items-center mb-4">
+            <Calendar className="w-6 h-6 text-blue-600" />
+            <h2 className="text-xl font-semibold ml-2">My Daily Recovery</h2>
+          </div>
+          <p className="text-gray-600">
+            What does a day of recovery look like?
+          </p>
+        </Link>
+
+        <Link
           to="/other-programs"
           className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
         >
           <div className="flex items-center mb-4">
             <Users className="w-6 h-6 text-blue-600" />
-            <h2 className="text-xl font-semibold ml-2">
-              12 Step Programs
-            </h2>
+            <h2 className="text-xl font-semibold ml-2">12 Step Programs</h2>
           </div>
           <p className="text-gray-600">
             Explore 12 step programs and their resources.
@@ -69,18 +102,6 @@ function HomePage() {
           </p>
         </Link>
       </div>
-      <footer className="mt-16 text-center text-gray-600">
-          <div className="flex items-center justify-center space-x-2">
-            <Users className="w-5 h-5" />
-            <p>
-              If you're struggling, you're not alone. I hope you can find help here.</p>
-          </div>
-          <div className="flex items-center justify-center space-x-2">
-            <p>
-              All opinions are my own and should not be used as medical advice.
-            </p>
-          </div>
-        </footer>
     </div>
   );
 }

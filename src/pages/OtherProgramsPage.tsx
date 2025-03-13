@@ -95,7 +95,7 @@ function OtherProgramsPage() {
       name: 'Nar-Anon Family Groups (Nar-Anon)',
       website: 'https://www.nar-anon.org',
       description:
-        'A 12-step program for the friends and families of individuals who struggle with drug addiction, offering a supportive environment to help members manage the challenges that come with a loved one’s substance abuse.',
+        "A 12-step program for the friends and families of individuals who struggle with drug addiction, offering a supportive environment to help members manage the challenges that come with a loved one’s substance abuse.",
       founded: '1977',
       focus: 'Family support for drug addiction',
     },
