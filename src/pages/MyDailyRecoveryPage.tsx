@@ -69,7 +69,7 @@ function MyDailyRecoveryPage() {
             time: '7:30 AM',
             title: 'Work',
             description:
-                'The morning activity begins.  Having a meeting under my belt, I am ready to what the day holds.',
+                'The morning activity begins.  Having a meeting under my belt, I am ready for what the day holds.',
             type: 'work',
         },
         {
