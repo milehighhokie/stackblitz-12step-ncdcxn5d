@@ -122,6 +122,12 @@ function MyJourneyPage() {
         'Thank you for reading this.  I hope it gives you a look at what recovery can look like.',
       date: 'March 7, 2025',
     },
+    {
+      title: 'Grrr...Struggles with Unemployment',
+      description:
+        'It has been a struggle to find a new job.  I am trying to not let the stress get to me.  I am still abstinent, but I have been eating more than my food plan.  I will get back on track if I use the 9 tools of OA.',
+      date: 'March 14, 2025',
+    },
   ];
 
   return (
