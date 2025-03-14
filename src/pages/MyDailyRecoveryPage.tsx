@@ -9,6 +9,7 @@ import {
     AlarmClock,
     Mail,
     BarChart4,
+    Megaphone
 } from 'lucide-react';
 
 interface DailyTask {
@@ -23,6 +24,7 @@ interface DailyTask {
     | 'reading'
     | 'food'
     | 'alert'
+    | 'megaphone'
     | 'mail';
 }
 
@@ -48,6 +50,13 @@ function MyDailyRecoveryPage() {
             description:
                 'Update my sponsor on how I was with my recovery yesterday and what I have planned today.',
             type: 'mail',
+        },
+        {
+            time: '5:50 AM',
+            title: 'Hey Buddy!',
+            description:
+                'Update my accountability buddies on what I did yesterday and what I have planned today.',
+            type: 'megaphone',
         },
         {
             time: '6:00 AM',
@@ -107,7 +116,7 @@ function MyDailyRecoveryPage() {
             time: '9:00 PM',
             title: 'Bedtime',
             description:
-                'Think of my gratitudes of the day.',
+                'I express gratitude for the positive moments of the day and try to forgive the negative ones.',
             type: 'action',
         },
     ];
@@ -128,6 +137,8 @@ function MyDailyRecoveryPage() {
                 return <AlarmClock className="w-6 h-6 text-red-600" />;
             case 'mail':
                 return <Mail className="w-6 h-6 text-orange-600" />;
+            case 'megaphone':
+                return <Megaphone className="w-6 h-6 text-pink-600" />;
             case 'work':
                 return <BarChart4 className="w-6 h-6 text-orange-600" />;
             default:
